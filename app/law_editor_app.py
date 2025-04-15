@@ -10,6 +10,6 @@ if st.button("🚀 시작하기"):
         st.warning("찾을 단어를 입력해주세요.")
     else:
         with st.spinner("법령 검색 중..."):
-            result_text = process_laws(search_word)
+            result_text = process_laws(search_word, st)
             st.success("📄 결과가 생성되었습니다.")
             st.download_button("📥 결과 텍스트 다운로드", result_text, file_name="개정안_결과.txt")
